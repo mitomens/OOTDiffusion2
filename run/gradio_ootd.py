@@ -114,7 +114,7 @@ with block:
         gr.Markdown("***Support upper-body garments***")
     with gr.Row():
         with gr.Column():
-            vton_img = gr.Image(label="Model", sources='upload', type="filepath", height=384, value=model_hd)
+            vton_img = gr.Image(label="Model", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 inputs=vton_img,
                 examples_per_page=14,
@@ -135,7 +135,7 @@ with block:
                     os.path.join(example_path, 'model/01861_00.jpg'),
                 ])
         with gr.Column():
-            garm_img = gr.Image(label="Garment", sources='upload', type="filepath", height=384, value=garment_hd)
+            garm_img = gr.Image(label="Garment", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 inputs=garm_img,
                 examples_per_page=14,
@@ -175,7 +175,7 @@ with block:
         gr.Markdown("***Support upper-body/lower-body/dresses; garment category must be paired!!!***")
     with gr.Row():
         with gr.Column():
-            vton_img_dc = gr.Image(label="Model", sources='upload', type="filepath", height=384, value=model_dc)
+            vton_img_dc = gr.Image(label="Model", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 label="Examples (upper-body/lower-body)",
                 inputs=vton_img_dc,
@@ -203,7 +203,7 @@ with block:
                     os.path.join(example_path, 'model/053700_0.jpg'),
                 ])
         with gr.Column():
-            garm_img_dc = gr.Image(label="Garment", sources='upload', type="filepath", height=384, value=garment_dc)
+            garm_img_dc = gr.Image(label="Garment", sources='upload', type="filepath", height=384)
             category_dc = gr.Dropdown(label="Garment category (important option!!!)", choices=["Upper-body", "Lower-body", "Dress"], value="Upper-body")
             example = gr.Examples(
                 label="Examples (upper-body)",
