@@ -117,7 +117,7 @@ with block:
             vton_img = gr.Image(label="Model", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 inputs=vton_img,
-                examples_per_page=14,
+                examples_per_page=15,
                 examples=[
                     os.path.join(example_path, 'model/model_1.png'),
                     os.path.join(example_path, 'model/model_2.png'),
@@ -139,7 +139,7 @@ with block:
             garm_img = gr.Image(label="Garment", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 inputs=garm_img,
-                examples_per_page=14,
+                examples_per_page=17,
                 examples=[
                     os.path.join(example_path, 'garment/03244_00.jpg'),
                     os.path.join(example_path, 'garment/00126_00.jpg'),
