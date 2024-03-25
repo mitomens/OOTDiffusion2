@@ -133,6 +133,7 @@ with block:
                     os.path.join(example_path, 'model/14627_00.jpg'),
                     os.path.join(example_path, 'model/09597_00.jpg'),
                     os.path.join(example_path, 'model/01861_00.jpg'),
+                    os.path.join(example_path, 'model/real_woman.jpg'),                
                 ])
         with gr.Column():
             garm_img = gr.Image(label="Garment", sources='upload', type="filepath", height=384)
@@ -154,6 +155,9 @@ with block:
                     os.path.join(example_path, 'garment/00151_00.jpg'),
                     os.path.join(example_path, 'garment/12562_00.jpg'),
                     os.path.join(example_path, 'garment/04825_00.jpg'),
+                    os.path.join(example_path, 'garment/IMG_3857.jpg'),
+                    os.path.join(example_path, 'garment/itokin_dabo.jpg'),
+                    os.path.join(example_path, 'garment/slim_image.jpg'),
                 ])
         with gr.Column():
             result_gallery = gr.Gallery(label='Output', show_label=False, elem_id="gallery", preview=True, scale=1)   
