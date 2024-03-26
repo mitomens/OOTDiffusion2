@@ -121,6 +121,7 @@ with block:
                 examples=[
                     os.path.join(example_path, 'model/real_woman.jpg'),
                     os.path.join(example_path, 'model/itokin_woman001.jpg'),
+                    """
                     os.path.join(example_path, 'model/itokin_woman.jpg'),
                     os.path.join(example_path, 'model/model_1.png'),
                     os.path.join(example_path, 'model/model_2.png'),
@@ -135,7 +136,8 @@ with block:
                     os.path.join(example_path, 'model/02849_00.jpg'),
                     os.path.join(example_path, 'model/14627_00.jpg'),
                     os.path.join(example_path, 'model/09597_00.jpg'),
-                    os.path.join(example_path, 'model/01861_00.jpg'),             
+                    os.path.join(example_path, 'model/01861_00.jpg'),        
+                    """     
                 ])
         with gr.Column():
             garm_img = gr.Image(label="Garment", sources='upload', type="filepath", height=384)
@@ -150,6 +152,7 @@ with block:
                     os.path.join(example_path, 'garment/IMG_3870.jpg'),
                     os.path.join(example_path, 'garment/itokin_dabo.jpg'),
                     os.path.join(example_path, 'garment/slim_image.jpg'),
+                    """
                     os.path.join(example_path, 'garment/03244_00.jpg'),
                     os.path.join(example_path, 'garment/00126_00.jpg'),
                     os.path.join(example_path, 'garment/03032_00.jpg'),
@@ -164,6 +167,7 @@ with block:
                     os.path.join(example_path, 'garment/00151_00.jpg'),
                     os.path.join(example_path, 'garment/12562_00.jpg'),
                     os.path.join(example_path, 'garment/04825_00.jpg'),
+                    """
                 ])
         with gr.Column():
             result_gallery = gr.Gallery(label='Output', show_label=False, elem_id="gallery", preview=True, scale=1)   
@@ -178,7 +182,7 @@ with block:
     ips = [vton_img, garm_img, n_samples, n_steps, image_scale, seed]
     run_button.click(fn=process_hd, inputs=ips, outputs=[result_gallery])
 
-
+    """
     with gr.Row():
         gr.Markdown("## Full-body")
     with gr.Row():
@@ -266,5 +270,6 @@ with block:
         
     ips_dc = [vton_img_dc, garm_img_dc, category_dc, n_samples_dc, n_steps_dc, image_scale_dc, seed_dc]
     run_button_dc.click(fn=process_dc, inputs=ips_dc, outputs=[result_gallery_dc])
+    """
 
 block.launch(server_name='0.0.0.0', server_port=7865, share=True)
