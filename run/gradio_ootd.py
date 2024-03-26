@@ -117,7 +117,7 @@ with block:
             vton_img = gr.Image(label="Model", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 inputs=vton_img,
-                examples_per_page=17,
+                examples_per_page=2,
                 examples=[
                     os.path.join(example_path, 'model/real_woman.jpg'),
                     os.path.join(example_path, 'model/itokin_woman001.jpg'),
@@ -143,16 +143,16 @@ with block:
             garm_img = gr.Image(label="Garment", sources='upload', type="filepath", height=384)
             example = gr.Examples(
                 inputs=garm_img,
-                examples_per_page=21,
+                examples_per_page=6,
                 examples=[
                     os.path.join(example_path, 'garment/itokin_shirt01.jpg'),
                     os.path.join(example_path, 'garment/IMG_3861.jpg'),
                     os.path.join(example_path, 'garment/IMG_3857.jpg'),
                     os.path.join(example_path, 'garment/IMG_3872.jpg'),
                     os.path.join(example_path, 'garment/IMG_3870.jpg'),
-                    os.path.join(example_path, 'garment/itokin_dabo.jpg'),
                     os.path.join(example_path, 'garment/slim_image.jpg'),
                     """
+                    os.path.join(example_path, 'garment/itokin_dabo.jpg'),
                     os.path.join(example_path, 'garment/03244_00.jpg'),
                     os.path.join(example_path, 'garment/00126_00.jpg'),
                     os.path.join(example_path, 'garment/03032_00.jpg'),
