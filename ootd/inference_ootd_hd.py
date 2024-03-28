@@ -94,7 +94,7 @@ class OOTDiffusionHD:
                 image_vton=None,
                 mask=None,
                 image_ori=None,
-                num_samples=1,
+                num_samples=2,
                 num_steps=20,
                 image_scale=1.0,
                 seed=-1,
